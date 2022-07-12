@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin-right: 35px;
+    border: transparent;
+    background-color: transparent;
+}
+
+.navlink {
+    display: block;
+    text-decoration: none;
+    margin-left: 35px;
+}
