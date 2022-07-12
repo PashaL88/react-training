@@ -1,16 +1,19 @@
 .nav {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
 }
 
 .button {
-    margin-right: 35px;
+    margin-right: 50px;
     border: transparent;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .navlink {
     display: block;
     text-decoration: none;
-    margin-left: 35px;
+    margin-left: 50px;
 }

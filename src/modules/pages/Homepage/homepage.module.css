@@ -1,10 +1,22 @@
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
 .input {
     margin-bottom: 30px;
     width: 290px;
 }
 
+.container {
+display: flex;
+justify-content: center;
+}
+
 .button {
-    margin-right: 10px;
+    display: block;
+    /* margin-right: 10px; */
     font-size: 20px;
     border: transparent;
     background-color: transparent;

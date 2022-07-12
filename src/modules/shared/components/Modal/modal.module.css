@@ -1,0 +1,19 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: green;
+    transform: translatex(0);
+        transition: transform 250ms ease;
+}
+
+
+.close {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
