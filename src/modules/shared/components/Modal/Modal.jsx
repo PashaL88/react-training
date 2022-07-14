@@ -2,6 +2,8 @@ import styles from "./modal.module.css";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
+import Side from "../../SVG/Side.svg";
+
 // import { createPortal } from "react-dom";
 
 // const modalRoot = document.getElementById("modal-root");
@@ -25,9 +27,8 @@ const Modal = ({ children, close }) => {
   return (
     <div className={styles.overlay} onClick={closeModal}>
       <div className={styles.modal}>
-        <span className={styles.close} onClick={close}>
-          X
-        </span>
+        <img src={Side} alt="close" className={styles.close} onClick={close} />
+
         {children}
       </div>
     </div>

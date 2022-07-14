@@ -1,8 +1,8 @@
 // import { Routes } from "react-router-dom";
 import styles from "./App.module.css";
 
-import Header from "./modules/Header";
-import Routes from "./modules/Routes";
+import Header from "./client/Header";
+import Routes from "./Routes";
 // import Product from "./modules/Product/Product";
 
 function App() {

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "link": "#",
+        "text": "Food"
+    },
+     {
+        "id": "2",
+        "link": "#",
+        "text": "Drink"
+    },
+     {
+        "id": "3",
+        "link": "#",
+        "text": "Snacks"
+    },
+     {
+        "id": "4",
+        "link": "#",
+        "text": "Deserts"
+    }
+]
