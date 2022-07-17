@@ -28,7 +28,7 @@ const Header = () => {
           <img src={Vector} alt="Modal" />
         </button>
         <AuthMenu />
-        <NavLink to="/" className={styles.navlink}>
+        <NavLink to="/cart" className={styles.navlink}>
           <img src={cart} alt="cart" />
         </NavLink>
       </nav>

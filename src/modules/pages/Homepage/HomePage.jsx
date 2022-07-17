@@ -1,7 +1,7 @@
 import styles from "./homepage.module.css";
 import { useState } from "react";
 import items from "../../../data/menu.json";
-// import Container from "../../shared/components/Food/Container";
+import Container from "../../shared/components/Container";
 import Food from "../../shared/components/Food/Food";
 
 const HomePage = () => {
@@ -26,12 +26,12 @@ const HomePage = () => {
 
   return (
     <div className={styles.homepage}>
-      {/* <Container> */}
-      <h1 className={styles.title}>Best delivery for you!</h1>
-      <input className={styles.input} placeholder="search" />
-      <ul className={styles.container}>{elements}</ul>
-      {buttonActiveIndex === 0 && <Food />}
-      {/* </Container> */}
+      <Container>
+        <h1 className={styles.title}>Best delivery for you!</h1>
+        <input className={styles.input} placeholder="search" />
+        <ul className={styles.container}>{elements}</ul>
+        {buttonActiveIndex === 0 && <Food />}
+      </Container>
     </div>
   );
 };
