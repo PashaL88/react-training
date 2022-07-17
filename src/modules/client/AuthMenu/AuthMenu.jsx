@@ -8,12 +8,12 @@ const getActiveLink = ({ isActive }) =>
 const AuthMenu = () => {
   return (
     <>
-      <NavLink to="/products" className={getActiveLink}>
+      <NavLink to="/login" className={getActiveLink}>
         Login
       </NavLink>
       <span className={styles.decor}>|</span>
-      <NavLink to="/" className={getActiveLink}>
-        Password
+      <NavLink to="/register" className={getActiveLink}>
+        Register
       </NavLink>
     </>
   );
