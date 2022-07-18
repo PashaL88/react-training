@@ -2,6 +2,8 @@ import { useState } from "react";
 import { items } from "./items";
 import s from "./cart.module.css";
 
+import CartList from "./CartList";
+
 const Cart = () => {
   const [products, setProducts] = useState([...items]);
 
@@ -14,14 +16,26 @@ const Cart = () => {
   };
 
   const clickIncrementBtn = (id) => {
+    products.forEach((item) => {
+      if (item.id === id) {
+        item.count += 1;
+      }
+      return item;
+    });
     setProducts((prevState) => {
-      const product = prevState.find((item) => item.id === id);
-      product.count += 1;
-      //   prevState.map((item) => ({
-      //     ...item,
-      //     count: item.id === id ? (item.count += 1) : item.count,
-      //   }));
-      return [...products, product];
+      return [...prevState];
+    });
+  };
+
+  const clickDecrementBtn = (id) => {
+    products.forEach((item) => {
+      if (item.id === id) {
+        item.count -= 1;
+      }
+      return item;
+    });
+    setProducts((prevState) => {
+      return [...prevState];
     });
   };
 
@@ -31,26 +45,19 @@ const Cart = () => {
     });
   };
 
-  const elements = items.map(({ name, price, count, id }) => (
-    <li key={id} className={s.item}>
-      <span className={s.description}>{name},</span>
-      <span className={s.price}>{price}$</span>
-      <span className={s.count}>{count}</span>
-      <button className={s.button} onClick={() => clickIncrementBtn(id)}>
-        +
-      </button>
-      <button className={s.button}>-</button>
-      <button className={s.button} onClick={() => deleteItem(id)}>
-        Delete
-      </button>
-    </li>
-  ));
-
   const totalPrice = calcTotalPrice();
+
+  const filteredProducts = products.filter((el) => el.count);
 
   return (
     <>
-      <ul className={s.list}>{elements}</ul>
+      {/* {products.length && <ul className={s.list}>{elements}</ul>} */}
+      <CartList
+        products={filteredProducts}
+        deleteItem={deleteItem}
+        clickIncrementBtn={clickIncrementBtn}
+        clickDecrementBtn={clickDecrementBtn}
+      />
       <p className={s.total}>Total price:{totalPrice}$</p>
     </>
   );
