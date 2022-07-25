@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-training/static/css/main.a4cafe7e.css",
+    "main.js": "/react-training/static/js/main.21492bcb.js",
+    "static/media/shopping-cart.svg": "/react-training/static/media/shopping-cart.78e8a0f5f5d450d6932f5965a478a8be.svg",
+    "index.html": "/react-training/index.html",
+    "static/media/Side.svg": "/react-training/static/media/Side.4d7a10e06278d08f12ae576d515ab130.svg",
+    "static/media/Vector.svg": "/react-training/static/media/Vector.91f7588ed43877eb1b1e1848a7f1f89c.svg",
+    "main.a4cafe7e.css.map": "/react-training/static/css/main.a4cafe7e.css.map",
+    "main.21492bcb.js.map": "/react-training/static/js/main.21492bcb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4cafe7e.css",
+    "static/js/main.21492bcb.js"
+  ]
+}
