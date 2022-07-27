@@ -40,9 +40,7 @@ const Cart = () => {
   };
 
   const deleteItem = (id) => {
-    setProducts((prevState) => {
-      return prevState.filter((item) => item.id !== id);
-    });
+    setProducts((prevState) => prevState.filter((item) => item.id !== id));
   };
 
   const totalPrice = calcTotalPrice();

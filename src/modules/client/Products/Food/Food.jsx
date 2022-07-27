@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchFood } from "../../services/fetch";
+import { fetchFood } from "../../../shared/services/fetch";
 import FoodList from "./FoodList/Foodlist";
 
 const Food = () => {
@@ -36,7 +36,6 @@ const Food = () => {
   }, []);
 
   const { items, loading } = food;
-  console.log(items);
 
   return (
     <>

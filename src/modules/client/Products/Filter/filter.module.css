@@ -1,0 +1,22 @@
+.filter {
+    position: relative;
+}
+.input {
+    margin-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 290px;
+    height: 32px;
+    font-size: 17px;
+}
+
+.input::placeholder {
+    text-align: center;
+    font-size: 16px;
+}
+
+.img {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+}
