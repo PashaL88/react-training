@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchFood } from "../../../shared/services/fetch";
 import FoodList from "./FoodList/Foodlist";
 
-const Food = () => {
+const Food = ({ getFilteredProducts }) => {
   const [food, setFood] = useState({
     items: [],
     loading: false,
@@ -37,10 +37,12 @@ const Food = () => {
 
   const { items, loading } = food;
 
+  const filteredItems = getFilteredProducts(items[0]);
+
   return (
     <>
       {loading && <p>Loading...</p>}
-      {Boolean(items.length) && <FoodList items={items[0]} />}
+      {Boolean(items.length) && <FoodList items={filteredItems} />}
     </>
   );
 };

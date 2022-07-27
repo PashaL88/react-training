@@ -12,6 +12,18 @@ const Products = () => {
     setFilter(target.value);
   };
 
+  const getFilteredProducts = (products) => {
+    const filterText = filter.toLowerCase();
+    if (products) {
+      const filteredProducts = products.filter(({ name }) => {
+        const result = name.toLowerCase().includes(filterText);
+        console.log(result);
+        return result;
+      });
+      return filteredProducts;
+    }
+  };
+
   const elements = items.map((item, index) => {
     const className =
       buttonActiveIndex === index ? styles.buttonActive : styles.button;
@@ -31,7 +43,9 @@ const Products = () => {
     <>
       <Filter changeFilter={changeFilter} filter={filter} />
       <ul className={styles.container}>{elements}</ul>
-      {buttonActiveIndex === 0 && <Food />}
+      {buttonActiveIndex === 0 && (
+        <Food getFilteredProducts={getFilteredProducts} />
+      )}
     </>
   );
 };
