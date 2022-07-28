@@ -1,0 +1,14 @@
+{
+    "login": {
+        "en": "Login",
+        "tr": "Giriş yapmak",
+        "ua": "Логін",
+        "ru": "Логин"
+    },
+    "register": {
+        "en": "Register",
+        "tr": "üye olmak",
+        "ua": "Реєстрація",
+        "ru": "Регистрация"
+    }
+}

@@ -1,6 +1,8 @@
 import styles from "./modal.module.css";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
+// import { useContext } from "react";
+// import { langContext } from "../../../langContext";
 
 import Side from "../../SVG/Side.svg";
 
@@ -9,6 +11,7 @@ import Side from "../../SVG/Side.svg";
 // const modalRoot = document.getElementById("modal-root");
 
 const Modal = ({ children, close }) => {
+  // const lang = useContext(langContext);
   useEffect(() => {
     document.addEventListener("keydown", closeModal);
 

@@ -1,16 +1,17 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { langContext } from "../../../langContext";
 import AuthMenu from "../AuthMenu/";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
+import Vector from "../../../shared/SVG/Vector.svg";
+import cart from "../../../shared/SVG/shopping-cart.svg";
+import chevron from "../../../shared/SVG/chevron-left.svg";
 
-import Vector from "../../shared/SVG/Vector.svg";
-import cart from "../../shared/SVG/shopping-cart.svg";
-
-import Modal from "../../shared/components/Modal";
-
+import Modal from "../../../shared/components/Modal";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const { lang } = useContext(langContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -27,11 +28,15 @@ const Header = () => {
         <button className={styles.button} onClick={showModal}>
           <img src={Vector} alt="Modal" />
         </button>
+        <NavLink to="/react-training" className={styles.chevron}>
+          <img src={chevron} alt="chevron" />
+        </NavLink>
         <AuthMenu />
-        <NavLink to="/cart" className={styles.navlink}>
+        <NavLink to="/cart" className={styles.cart}>
           <img src={cart} alt="cart" />
         </NavLink>
       </nav>
+      <LanguageSwitcher />
       {isModalOpen && (
         <Modal close={closeModal}>
           <ul className={styles.list}>

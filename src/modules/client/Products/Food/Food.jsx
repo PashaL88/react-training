@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchFood } from "../../../shared/services/fetch";
+import { fetchFood } from "../../../../shared/services/fetch";
 import FoodList from "./FoodList/Foodlist";
 
 const Food = ({ getFilteredProducts }) => {
@@ -31,7 +31,7 @@ const Food = ({ getFilteredProducts }) => {
         }));
       }
     };
-    getFood();
+    // getFood();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

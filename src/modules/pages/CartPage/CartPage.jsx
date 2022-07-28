@@ -1,5 +1,5 @@
 import s from "./cartPage.module.css";
-import Container from "../../shared/components/Container";
+import Container from "../../../shared/components/Container";
 import Cart from "../../client/Cart";
 const CartPage = () => {
   return (

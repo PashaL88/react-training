@@ -1,10 +1,12 @@
 import items from "../../../data/menu.json";
 import styles from "./Products.module.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { langContext } from "../../../langContext";
 import Food from "./Food";
 import Filter from "./Filter";
 
 const Products = () => {
+  const lang = useContext(langContext);
   const [buttonActiveIndex, setButtonActiveIndex] = useState(null);
   const [filter, setFilter] = useState("");
 
@@ -17,7 +19,6 @@ const Products = () => {
     if (products) {
       const filteredProducts = products.filter(({ name }) => {
         const result = name.toLowerCase().includes(filterText);
-        console.log(result);
         return result;
       });
       return filteredProducts;

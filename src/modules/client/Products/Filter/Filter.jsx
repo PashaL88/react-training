@@ -1,5 +1,5 @@
 import styles from "./filter.module.css";
-import Search from "../../../shared/SVG/Search.svg";
+import Search from "../../../../shared/SVG/Search.svg";
 
 const Filter = ({ changeFilter, filter }) => {
   return (

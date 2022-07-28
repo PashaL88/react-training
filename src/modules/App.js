@@ -1,16 +1,16 @@
-// import { Routes } from "react-router-dom";
 import styles from "./App.module.css";
-
 import Header from "./client/Header";
 import Routes from "./Routes";
-// import Product from "./modules/Product/Product";
+import LangContext from "../langContext";
 
 function App() {
   return (
-    <div className={styles.container}>
-      <Header />
-      <Routes />
-    </div>
+    <LangContext>
+      <div className={styles.container}>
+        <Header />
+        <Routes />
+      </div>
+    </LangContext>
   );
 }
 

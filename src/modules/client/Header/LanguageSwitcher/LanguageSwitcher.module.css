@@ -1,0 +1,11 @@
+.langContainer {
+    text-align: center;
+}
+.lang {
+    display: inline-block;
+    cursor: pointer;
+}
+.currentLang {
+    composes: lang;
+    font-weight: bold;
+}
