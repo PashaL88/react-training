@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { useState, useContext } from "react";
-import { langContext } from "../../../langContext";
+import { useState } from "react";
+// import { langContext } from "../../../langContext";
 import AuthMenu from "../AuthMenu/";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 import Vector from "../../../shared/SVG/Vector.svg";
@@ -11,7 +11,7 @@ import Modal from "../../../shared/components/Modal";
 import styles from "./Header.module.css";
 
 const Header = () => {
-  const { lang } = useContext(langContext);
+  // const { lang } = useContext(langContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {

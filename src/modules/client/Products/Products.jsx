@@ -1,12 +1,12 @@
 import items from "../../../data/menu.json";
 import styles from "./Products.module.css";
-import { useState, useContext } from "react";
-import { langContext } from "../../../langContext";
+import { useState } from "react";
+// import { langContext } from "../../../langContext";
 import Food from "./Food";
 import Filter from "./Filter";
 
 const Products = () => {
-  const lang = useContext(langContext);
+  // const lang = useContext(langContext);
   const [buttonActiveIndex, setButtonActiveIndex] = useState(null);
   const [filter, setFilter] = useState("");
 

@@ -1,12 +1,12 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { items } from "./items";
 import s from "./cart.module.css";
-import { langContext } from "../../../langContext";
+// import { langContext } from "../../../langContext";
 
 import CartList from "./CartList";
 
 const Cart = () => {
-  const lang = useContext(langContext);
+  // const { lang } = useContext(langContext);
   const [products, setProducts] = useState([...items]);
 
   const calcTotalPrice = () => {

@@ -31,7 +31,7 @@ const Food = ({ getFilteredProducts }) => {
         }));
       }
     };
-    // getFood();
+    getFood();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
