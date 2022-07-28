@@ -4,14 +4,6 @@ import { langContext } from "../../../../langContext";
 const LanguageSwitcher = () => {
   const { lang, setLang } = useContext(langContext);
   const handeClick = ({ target }) => {
-    // if (target.textContent.toLowerCase() === "en") {
-    //   return setLang("en");
-    // } else if (target.textContent.toLowerCase() === "tr") {
-    //   return setLang("tr");
-    // } else if (target.textContent.toLowerCase() === "ua") {
-    //   return setLang("ua");
-    // } else return setLang("ru");
-
     switch (target.textContent.toLowerCase()) {
       case "tr":
         setLang("tr");

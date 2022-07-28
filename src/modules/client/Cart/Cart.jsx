@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { items } from "./items";
 import s from "./cart.module.css";
 // import { langContext } from "../../../langContext";
@@ -17,33 +17,45 @@ const Cart = () => {
     return total;
   };
 
-  const clickIncrementBtn = (id) => {
-    products.forEach((item) => {
-      if (item.id === id) {
-        item.count += 1;
-      }
-      return item;
-    });
-    setProducts((prevState) => {
-      return [...prevState];
-    });
-  };
+  const clickIncrementBtn = useCallback(
+    (id) => {
+      products.forEach((item) => {
+        if (item.id === id) {
+          item.count += 1;
+        }
+        return item;
+      });
+      setProducts((prevState) => {
+        return [...prevState];
+      });
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [setProducts]
+  );
 
-  const clickDecrementBtn = (id) => {
-    products.forEach((item) => {
-      if (item.id === id) {
-        item.count -= 1;
-      }
-      return item;
-    });
-    setProducts((prevState) => {
-      return [...prevState];
-    });
-  };
+  const clickDecrementBtn = useCallback(
+    (id) => {
+      products.forEach((item) => {
+        if (item.id === id) {
+          item.count -= 1;
+        }
+        return item;
+      });
+      setProducts((prevState) => {
+        return [...prevState];
+      });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [setProducts]
+  );
 
-  const deleteItem = (id) => {
-    setProducts((prevState) => prevState.filter((item) => item.id !== id));
-  };
+  const deleteItem = useCallback(
+    (id) => {
+      setProducts((prevState) => prevState.filter((item) => item.id !== id));
+    },
+    [setProducts]
+  );
 
   const totalPrice = calcTotalPrice();
 

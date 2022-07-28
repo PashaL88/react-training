@@ -1,4 +1,5 @@
 import s from "./cartList.module.css";
+import CartListItem from "./CartListItem/CartListItem";
 
 const CartList = ({
   products,
@@ -6,30 +7,16 @@ const CartList = ({
   clickIncrementBtn,
   clickDecrementBtn,
 }) => {
-  const elements = products.map(({ name, price, count, id }) => (
-    <li key={id} className={s.item}>
-      <span className={s.description}>{name},</span>
-      <span className={s.price}>{price}$</span>
-      <span className={s.count}>{count}</span>
-      <button
-        className={s.button}
-        type="button"
-        onClick={() => clickIncrementBtn(id)}
-      >
-        +
-      </button>
-      <button
-        className={s.button}
-        type="button"
-        onClick={() => clickDecrementBtn(id)}
-      >
-        -
-      </button>
-      <button className={s.button} type="button" onClick={() => deleteItem(id)}>
-        Delete
-      </button>
-    </li>
+  const elements = products.map((item) => (
+    <CartListItem
+      key={item.id}
+      deleteItem={deleteItem}
+      clickIncrementBtn={clickIncrementBtn}
+      clickDecrementBtn={clickDecrementBtn}
+      {...item}
+    />
   ));
+
   return (
     <>{Boolean(products.length) && <ul className={s.list}>{elements}</ul>}</>
   );
