@@ -12,6 +12,7 @@ const myRoutes = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 };

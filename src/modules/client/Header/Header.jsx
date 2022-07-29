@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 // import { langContext } from "../../../langContext";
 import AuthMenu from "../AuthMenu/";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
@@ -14,6 +15,8 @@ const Header = () => {
   // const { lang } = useContext(langContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const location = useLocation();
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -25,12 +28,17 @@ const Header = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <button className={styles.button} onClick={showModal}>
-          <img src={Vector} alt="Modal" />
-        </button>
-        <NavLink to="/react-training" className={styles.chevron}>
-          <img src={chevron} alt="chevron" />
-        </NavLink>
+        {location.pathname === "/react-training" && (
+          <button className={styles.button} onClick={showModal}>
+            <img src={Vector} alt="Modal" />
+          </button>
+        )}
+        {location.pathname !== "/react-training" && (
+          <NavLink to="/react-training" className={styles.chevron}>
+            <img src={chevron} alt="chevron" />
+          </NavLink>
+        )}
+
         <AuthMenu />
         <NavLink to="/cart" className={styles.cart}>
           <img src={cart} alt="cart" />

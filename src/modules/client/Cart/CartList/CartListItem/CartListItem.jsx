@@ -9,7 +9,6 @@ const CartListItem = ({
   clickDecrementBtn,
   deleteItem,
 }) => {
-  console.log(`render ${name}`);
   return (
     <li className={s.item}>
       <span className={s.description}>{name},</span>

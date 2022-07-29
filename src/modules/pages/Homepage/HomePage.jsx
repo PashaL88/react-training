@@ -7,6 +7,7 @@ import locale from "./locale.json";
 
 const HomePage = () => {
   const { lang } = useContext(langContext);
+
   return (
     <div className={styles.homepage}>
       <Container>
