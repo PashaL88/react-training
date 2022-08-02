@@ -3,7 +3,7 @@ import styles from "./RegisterForm.module.css";
 const RegisterForm = () => {
   return (
     <>
-      <form action="">
+      <form action="" className={styles.form}>
         <label htmlFor="" className={styles.label}>
           Mobile phone
         </label>

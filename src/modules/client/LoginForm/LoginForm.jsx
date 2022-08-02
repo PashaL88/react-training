@@ -3,7 +3,7 @@ import styles from "./LoginForm.module.css";
 const LoginForm = () => {
   return (
     <>
-      <form action="">
+      <form action="" className={styles.form}>
         <label htmlFor="" className={styles.label}>
           Email
         </label>
