@@ -1,15 +1,15 @@
-import styles from "./App.module.css";
 import Header from "./client/Header";
 import Routes from "./Routes";
 import LangContext from "../langContext";
+import Container from "../shared/components/Container";
 
 function App() {
   return (
     <LangContext>
-      <div className={styles.container}>
+      <Container>
         <Header />
         <Routes />
-      </div>
+      </Container>
     </LangContext>
   );
 }
