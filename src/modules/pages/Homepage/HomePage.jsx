@@ -1,5 +1,4 @@
 import styles from "./homepage.module.css";
-import Container from "../../../shared/components/Container";
 import Products from "../../client/Products/Products";
 import { useContext } from "react";
 import { langContext } from "../../../langContext";
@@ -10,10 +9,8 @@ const HomePage = () => {
 
   return (
     <div className={styles.homepage}>
-      <Container>
-        <h1 className={styles.title}>{locale.title[lang]}</h1>
-        <Products />
-      </Container>
+      <h1 className={styles.title}>{locale.title[lang]}</h1>
+      <Products />
     </div>
   );
 };

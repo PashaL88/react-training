@@ -32,7 +32,7 @@ img {
     display: block;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -41,7 +41,7 @@ h6,
 p {
     margin: 0;
     padding: 0;
-}
+} */
 
 .visually-hidden {
     position: absolute;
