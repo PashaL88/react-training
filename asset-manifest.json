@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-training/static/css/main.f91da66e.css",
-    "main.js": "/react-training/static/js/main.1a4ca331.js",
+    "main.css": "/react-training/static/css/main.8259f439.css",
+    "main.js": "/react-training/static/js/main.f1d57b08.js",
     "static/media/shopping-cart.svg": "/react-training/static/media/shopping-cart.78e8a0f5f5d450d6932f5965a478a8be.svg",
     "index.html": "/react-training/index.html",
     "static/media/Search.svg": "/react-training/static/media/Search.30b028b343bac4cf5c51b9a7d1976d99.svg",
     "static/media/Side.svg": "/react-training/static/media/Side.4d7a10e06278d08f12ae576d515ab130.svg",
     "static/media/Vector.svg": "/react-training/static/media/Vector.91f7588ed43877eb1b1e1848a7f1f89c.svg",
     "static/media/chevron-left.svg": "/react-training/static/media/chevron-left.3c3686b70fc5daefdb14f13b8cbde617.svg",
-    "main.f91da66e.css.map": "/react-training/static/css/main.f91da66e.css.map",
-    "main.1a4ca331.js.map": "/react-training/static/js/main.1a4ca331.js.map"
+    "main.8259f439.css.map": "/react-training/static/css/main.8259f439.css.map",
+    "main.f1d57b08.js.map": "/react-training/static/js/main.f1d57b08.js.map"
   },
   "entrypoints": [
-    "static/css/main.f91da66e.css",
-    "static/js/main.1a4ca331.js"
+    "static/css/main.8259f439.css",
+    "static/js/main.f1d57b08.js"
   ]
 }
