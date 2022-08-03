@@ -37,7 +37,6 @@ const Food = ({ getFilteredProducts }) => {
 
   const { items, loading } = food;
 
-  const filteredItems = getFilteredProducts(items[0]);
   const filteredItems = getFilteredProducts(items[1]);
 
   return (
